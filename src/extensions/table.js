@@ -19,7 +19,7 @@
     tables.th = function(header){
       if (header.trim() === "") { return "";}
       var id = header.trim().replace(/ /g, '_').toLowerCase();
-      return '<th id="' + id + '" style="'+style+'">' + header + '</th>';
+      return '<th id="' + id + '" style="'+style+'"> ' + converter.makeHtml(header) + ' </th>';
     };
     tables.td = function(cell) {
       return '<td style="'+style+'">' + converter.makeHtml(cell) + '</td>';
